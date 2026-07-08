@@ -1,0 +1,6 @@
+{
+  "name": "云境东方 Yunjing Oriental",
+  "description": "云境东方豪宅官方品鉴与预约网站 | Yunjing Oriental Luxury Residences Official Showcase and Appointment Portal",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

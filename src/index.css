@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Serif SC", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif SC", "Cinzel", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Re-mapping gold colors to modern Clean Minimalist Indigo and Slate palettes */
+  --color-gold-50: #f8fafc; /* slate-50 */
+  --color-gold-100: #f1f5f9; /* slate-100 */
+  --color-gold-200: #e2e8f0; /* slate-200 */
+  --color-gold-300: #a5b4fc; /* indigo-300 */
+  --color-gold-400: #6366f1; /* indigo-500 */
+  --color-gold-500: #4f46e5; /* indigo-600 (primary accent) */
+  --color-gold-600: #4338ca; /* indigo-700 */
+  --color-gold-700: #3730a3; /* indigo-800 */
+  --color-gold-800: #1e1b4b; /* indigo-950 */
+  --color-gold-900: #0f172a; /* slate-900 */
+  --color-gold-950: #020617; /* slate-950 */
+
+  --color-slate-950: #0f172a;
+}
+
+/* Base resets & animations */
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc; /* slate-50 */
+  color: #0f172a; /* slate-900 */
+  overflow-x: hidden;
+}
+
+/* Elegance enhancements */
+.font-serif-china {
+  font-family: var(--font-sans); /* Clean minimalism prefers sans-serif throughout */
+}
+
+.font-sans-eng {
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #4f46e5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* Smooth active focus glow */
+input:focus, select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.3);
+}
+
+/* Custom map marker pulse animation */
+@keyframes marker-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(79, 70, 229, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+  }
+}
+
+.map-pulse {
+  animation: marker-pulse 2s infinite;
+}
